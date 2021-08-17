@@ -108,10 +108,11 @@ a{
 .card{
     width: 264px;
     margin-bottom: 20px;
+    margin-right: 15px;
 }
-.card:not(:nth-child(3n)){
+/* .card:not(:nth-child(3n)){
     margin-right: 20px;
-}
+} */
 
 .card-image{
     border-radius: 10px;
@@ -131,6 +132,9 @@ a{
     justify-content: space-between;
     align-items: center;
     margin: 12px 0 5px;
+}
+.search-button{
+    cursor: pointer;
 }
 
 .card-text{
@@ -260,6 +264,10 @@ a{
          
       }
 
+      .close-menu{
+          display: none;
+      }
+
       .content-text>p{
           margin: 0;
           margin-bottom: 3px;
@@ -346,3 +354,170 @@ a{
       .page-title{
           margin: 0 0 25px;
       }
+      .navbar-panel{
+          display: flex;
+          align-items:center;
+          flex-grow: 1;
+      }
+      .menu-button{
+          background-color: #fff;
+          border:none;
+          cursor: pointer;
+          display: none;
+      }
+
+
+
+
+
+
+
+
+      /*
+      
+      
+      
+      
+      Медиа
+      
+      
+      
+      
+      */
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media 
+/* (min-width: 992px) and  */
+(max-width: 1199px) {
+    .container{
+        width:90%;
+    }
+    .card{
+        width: 45%;
+    }
+    .card-image{
+        width: 100%;
+        height: 200px;
+    }
+
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container{
+        width:90%;
+    }
+    .card-image{
+        height: 150px;
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+   
+
+    .container{
+        width:95%;
+    }
+    .card{
+        width: 90%;
+    }
+    .page-content{
+        grid-template-columns: 8fr 4fr;
+    }
+    .menu-button{
+          display: block;
+      }
+
+    .close-menu{
+        display: block;
+        position: absolute;
+        top: 30px;
+        right:30px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border:none;
+        background-color: #fff;
+        
+    }
+
+    .navbar-panel{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 9;
+        flex-direction: column;
+        justify-content: start;
+        align-items:center;
+        transition: transform 0.2s, opacity 0.2s;
+        transform: translateX(100%); 
+        opacity: 0;
+        font-size: 18px;
+    }
+    .is-open{
+        opacity: 1;
+        transform: translateX(0);
+        overflow-y: hidden;
+    }
+    .search-button-text{
+        display: none;
+    }
+
+
+    .navbar-menu{
+        margin-top: 150px;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 576px) {
+
+    .card{
+        width: 100%;
+        margin-right: 0;
+    }
+    .container{
+        width:90%;
+    }
+    .page-content{
+        grid-template-columns: 12fr;
+    }
+    .card-image{
+        height: 250px;
+    }
+
+}
+@media (max-width: 480px) {
+
+     .swiper-wrapper{
+        width:30%;
+    }
+
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
+}

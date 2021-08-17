@@ -37,3 +37,14 @@
           swiper: swiper,
         },
       });
+const menuBtn = document.querySelector('.menu-button'),
+    navbarPanel = document.querySelector('.navbar-panel'),
+    closeMenuBtn = document.querySelector('.close-menu');
+
+
+menuBtn.addEventListener('click', () => {
+    navbarPanel.classList.add('is-open');
+})
+closeMenuBtn.addEventListener('click', () => {
+    navbarPanel.classList.remove('is-open');
+})
